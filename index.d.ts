@@ -1,4 +1,4 @@
-import { Cookie } from 'puppeteer'
+import { Cookie, Headers, HttpMethod } from 'puppeteer'
 
 declare namespace MerryMaker {
   /** Scan ID associated with event (UUIDv4) */
@@ -28,15 +28,15 @@ declare namespace MerryMaker {
   }
 
   interface WebResponse {
-    headers: string[]
+    headers: Headers,
     status: number
     url: string
   }
 
   interface WebRequestEvent {
     url: string
-    method: string
-    headers: string[]
+    method: HttpMethod,
+    headers: Headers,
     postData: string
     scanID: ScanID
     response: WebResponse[]
