@@ -24,30 +24,27 @@ declare namespace MerryMaker {
   | WebScriptEvent
 
   interface ScanEvent {
-    scanId: ScanID
+    scanID: ScanID
     type: ScanEventType
+    payload: ScanEventPayload
   }
 
   interface WebPageError {
     /** Error message */
     message: string
-    scanID: ScanID
   }
 
   interface WebConsoleMessage {
     /** Console message */
     message: string
-    scanID: ScanID
   }
 
   interface WebWorkerCreated {
     url: string
     page: string
-    scanID: ScanID
   }
 
   interface WebCookies {
-    scanID: ScanID
     cookies: Cookie[]
   }
 
@@ -62,13 +59,11 @@ declare namespace MerryMaker {
     method: HttpMethod,
     headers: Headers,
     postData: string
-    scanID: ScanID
     response: WebResponse
   }
 
   interface WebResponseError {
     message: string
-    scanID: ScanID
   }
 
   interface TargetEle {
@@ -90,7 +85,6 @@ declare namespace MerryMaker {
     func: string
     args: string[]
     funcSource: string
-    scanID: ScanID
     target: TargetEle
     trace: Trace
   }
@@ -101,7 +95,6 @@ declare namespace MerryMaker {
     serverLastModified: string
     sha256: string
     redirect: string[]
-    scanID: ScanID
   }
 }
 
