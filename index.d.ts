@@ -39,7 +39,7 @@ declare namespace MerryMaker {
     headers: Headers,
     postData: string
     scanID: ScanID
-    response: WebResponse[]
+    response: WebResponse
   }
 
   interface WebResponseError {
