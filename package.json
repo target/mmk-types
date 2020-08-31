@@ -1,0 +1,9 @@
+{
+  "name": "merry-maker-types",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/puppeteer": "^3.0.1"
+  }
+}
