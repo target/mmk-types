@@ -4,6 +4,30 @@ declare namespace MerryMaker {
   /** Scan ID associated with event (UUIDv4) */
   type ScanID = string
 
+  type ScanEventType = 'page-error'
+  | 'console-message'
+  | 'worker-created'
+  | 'cookie'
+  | 'response'
+  | 'request'
+  | 'response-error'
+  | 'function-call'
+  | 'script-response'
+
+  type ScanEventPayload = WebPageError
+  | WebConsoleMessage
+  | WebWorkerCreated
+  | WebCookies
+  | WebRequestEvent
+  | WebResponseError
+  | WebFunctionCallEvent
+  | WebScriptEvent
+
+  interface ScanEvent {
+    scanId: ScanID
+    type: ScanEventType
+  }
+
   interface WebPageError {
     /** Error message */
     message: string
