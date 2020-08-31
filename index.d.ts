@@ -8,11 +8,11 @@ declare namespace MerryMaker {
   | 'console-message'
   | 'worker-created'
   | 'cookie'
-  | 'response'
   | 'request'
   | 'response-error'
   | 'function-call'
   | 'script-response'
+  | 'error'
 
   type ScanEventPayload = WebPageError
   | WebConsoleMessage
@@ -27,6 +27,10 @@ declare namespace MerryMaker {
     scanID: ScanID
     type: ScanEventType
     payload: ScanEventPayload
+  }
+
+  interface ScanError {
+    message: string
   }
 
   interface WebPageError {
