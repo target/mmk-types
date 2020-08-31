@@ -80,3 +80,5 @@ declare namespace MerryMaker {
     scanID: ScanID
   }
 }
+
+export = MerryMaker
