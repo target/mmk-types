@@ -60,8 +60,9 @@ declare namespace MerryMaker {
 
   interface WebRequestEvent {
     url: string
-    method: HttpMethod,
-    headers: Headers,
+    method: HttpMethod
+    headers: Headers
+    resourceType: string
     postData: string
     response: WebResponse
   }
