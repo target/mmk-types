@@ -99,6 +99,7 @@ declare namespace MerryMaker {
     page: string
     serverLastModified: string
     sha256: string
+    headers: Headers,
     redirect: string[]
   }
 }
