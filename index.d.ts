@@ -13,6 +13,7 @@ declare namespace MerryMaker {
   | 'function-call'
   | 'script-response'
   | 'error'
+  | 'complete'
 
   type ScanEventPayload = WebPageError
   | WebConsoleMessage
