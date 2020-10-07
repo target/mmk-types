@@ -12,11 +12,13 @@ declare namespace MerryMaker {
   | 'response-error'
   | 'function-call'
   | 'script-response'
+  | 'log-message'
   | 'error'
   | 'complete'
 
   type ScanEventPayload = WebPageError
   | WebConsoleMessage
+  | LogMessage
   | WebWorkerCreated
   | WebCookies
   | WebRequestEvent
@@ -41,6 +43,11 @@ declare namespace MerryMaker {
 
   interface WebConsoleMessage {
     /** Console message */
+    message: string
+  }
+
+  interface LogMessage {
+    /** Log Message */
     message: string
   }
 
