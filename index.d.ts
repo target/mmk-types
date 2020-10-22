@@ -13,10 +13,15 @@ declare namespace MerryMaker {
   | 'function-call'
   | 'script-response'
   | 'file-download'
+  | 'log-message'
+  | 'screenshot'
   | 'error'
+  | 'complete'
 
   type ScanEventPayload = WebPageError
   | WebConsoleMessage
+  | LogMessage
+  | Screenshot
   | WebWorkerCreated
   | WebCookies
   | WebRequestEvent
@@ -52,6 +57,15 @@ declare namespace MerryMaker {
     message: string
   }
 
+  interface LogMessage {
+    /** Log Message */
+    message: string
+  }
+
+  interface Screenshot {
+    payload: string
+  }
+
   interface WebWorkerCreated {
     url: string
     page: string
@@ -69,8 +83,9 @@ declare namespace MerryMaker {
 
   interface WebRequestEvent {
     url: string
-    method: HttpMethod,
-    headers: Headers,
+    method: HttpMethod
+    headers: Headers
+    resourceType: string
     postData: string
     response: WebResponse
   }
@@ -107,6 +122,7 @@ declare namespace MerryMaker {
     page: string
     serverLastModified: string
     sha256: string
+    headers: Headers,
     redirect: string[]
   }
 
