@@ -30,8 +30,7 @@ declare namespace MerryMaker {
   | WebScriptEvent
 
   interface ScanEvent {
-    site_id?: string
-    scan_id: ScanID
+    scanID: ScanID
     type: ScanEventType
     payload: ScanEventPayload
   }
