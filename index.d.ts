@@ -12,6 +12,7 @@ declare namespace MerryMaker {
   | 'response-error'
   | 'function-call'
   | 'script-response'
+  | 'file-download'
   | 'error'
 
   type ScanEventPayload = WebPageError
@@ -24,13 +25,21 @@ declare namespace MerryMaker {
   | WebScriptEvent
 
   interface ScanEvent {
-    scanID: ScanID
+    site_id?: string
+    scan_id: ScanID
     type: ScanEventType
     payload: ScanEventPayload
   }
 
   interface ScanError {
     message: string
+  }
+
+  interface FileDownload {
+    url: string
+    filename: string
+    sha256: string
+    headers: unknown
   }
 
   interface WebPageError {
@@ -99,6 +108,16 @@ declare namespace MerryMaker {
     serverLastModified: string
     sha256: string
     redirect: string[]
+  }
+
+  interface FileAttributes {
+    id?: string
+    scan_id: string
+    created_at?: Date
+    url: string
+    filename: string
+    headers: unknown
+    sha256: string
   }
 }
 
