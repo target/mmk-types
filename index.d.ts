@@ -134,6 +134,70 @@ declare namespace MerryMaker {
     headers: unknown
     sha256: string
   }
+
+  interface EventResult {
+    scan_id: string
+    level: string
+    created_at?: Date
+  }
+
+  type EventMessage = {
+    message: string
+  }
+
+  interface LogMessageEvent extends EventResult {
+    entry: 'log-message'
+    event: EventMessage
+  }
+
+  interface ResponseErrorEvent extends EventResult {
+    entry: 'response-error'
+    event: EventMessage
+  }
+
+  interface ConsoleMessageEvent extends EventResult {
+    entry: 'console-message'
+    event: EventMessage
+  }
+
+  interface GeneralErrorEvent extends EventResult {
+    entry: 'error'
+    event: EventMessage
+  }
+
+  interface PageErrorEvent extends EventResult {
+    entry: 'page-error'
+    event: EventMessage
+  }
+
+  interface ScriptResponseEvent extends EventResult {
+    entry: 'script-response'
+    event: WebScriptEvent
+  }
+
+  interface RequestEvent extends EventResult {
+    entry: 'request'
+    event: WebRequestEvent
+  }
+
+  interface FunctionCallEvent extends EventResult {
+    entry: 'function-call'
+    event: WebFunctionCallEvent
+  }
+
+  interface RuleAlertEvent extends EventResult {
+    entry: 'rule-alert'
+    rule: 'string'
+    event: {
+      alert: boolean
+      name: string
+      error?: boolean
+      message?: string
+      level: 'prod' | 'test'
+      context: unknown
+    }
+  }
+
 }
 
 export = MerryMaker
