@@ -17,6 +17,7 @@ declare namespace MerryMaker {
   | 'screenshot'
   | 'error'
   | 'complete'
+  | 'rule-alert'
 
   type ScanEventPayload = WebPageError
   | WebConsoleMessage
@@ -137,7 +138,6 @@ declare namespace MerryMaker {
 
   interface EventResult {
     entry: ScanEventType
-    event?: unknown
     scan_id: string
     level: string
     created_at?: Date
