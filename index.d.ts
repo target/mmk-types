@@ -190,14 +190,14 @@ declare namespace MerryMaker {
 
   interface RuleAlertEvent extends EventResult {
     entry: 'rule-alert'
-    rule: 'string'
+    rule: string
     event: {
       alert: boolean
       name: string
       error?: boolean
       message?: string
       level: 'prod' | 'test'
-      context: unknown
+      context: Record<string, unknown>
     }
   }
 
