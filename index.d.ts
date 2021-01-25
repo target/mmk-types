@@ -25,6 +25,8 @@ declare namespace MerryMaker {
     error?: boolean
     message?: string
     level: 'prod' | 'test'
+    description?: string
+    playbook?: string
     context: Record<string, unknown>
   }
 
