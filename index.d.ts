@@ -141,7 +141,7 @@ declare namespace MerryMaker {
     scan_id: string
     level: string
     created_at?: Date
-    event: unknown
+    event: Record<string, unknown>
   }
 
   type EventMessage = {
