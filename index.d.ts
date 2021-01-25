@@ -19,6 +19,15 @@ declare namespace MerryMaker {
   | 'complete'
   | 'rule-alert'
 
+  interface RuleAlert {
+    alert: boolean
+    name: string
+    error?: boolean
+    message?: string
+    level: 'prod' | 'test'
+    context: Record<string, unknown>
+  }
+
   type ScanEventPayload = WebPageError
   | WebConsoleMessage
   | LogMessage
@@ -29,6 +38,7 @@ declare namespace MerryMaker {
   | WebResponseError
   | WebFunctionCallEvent
   | WebScriptEvent
+  | RuleAlert
 
   interface ScanEvent {
     scanID: ScanID
@@ -143,6 +153,7 @@ declare namespace MerryMaker {
     scan_id: string
     level: EventLogLevels
     created_at?: Date
+    event: EventMessage | ScanEventPayload
   }
 
   type EventMessage = {
@@ -192,14 +203,7 @@ declare namespace MerryMaker {
   interface RuleAlertEvent extends EventResult {
     entry: 'rule-alert'
     rule: string
-    event: {
-      alert: boolean
-      name: string
-      error?: boolean
-      message?: string
-      level: 'prod' | 'test'
-      context: Record<string, unknown>
-    }
+    event: RuleAlert
   }
 
 }
