@@ -208,6 +208,12 @@ declare namespace MerryMaker {
     event: RuleAlert
   }
 
+  interface ScanQueueJob {
+    name: string
+    scan_id: string
+    source_id: string
+    test: boolean
+  }
 }
 
 export = MerryMaker
