@@ -136,12 +136,13 @@ declare namespace MerryMaker {
     sha256: string
   }
 
+  type EventLogLevels = 'info' | 'error' | 'warning'
+
   interface EventResult {
     entry: ScanEventType
     scan_id: string
-    level: string
+    level: EventLogLevels
     created_at?: Date
-    event: Record<string, unknown>
   }
 
   type EventMessage = {
