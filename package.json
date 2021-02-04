@@ -1,7 +1,10 @@
 {
-  "name": "merry-maker-types",
+  "name": "@cfc/merry-maker-types",
   "version": "1.0.0",
-  "main": "index.js",
+  "author": "CyberDev <TTS-CyberDevEngineering@target.com>",
+  "description": "Merry Maker Typings",
+  "repository": "git.target.com/cfc/merry-maker-types",
+  "main": "index.d.ts",
   "license": "MIT",
   "dependencies": {
     "@types/puppeteer": "^3.0.1"
