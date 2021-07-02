@@ -4,6 +4,7 @@ declare namespace MerryMaker {
   /** Scan ID associated with event (UUIDv4) */
   type ScanID = string
 
+  /** Event types recorded during each scan */
   type ScanEventType = 'page-error'
   | 'console-message'
   | 'worker-created'
@@ -19,17 +20,20 @@ declare namespace MerryMaker {
   | 'complete'
   | 'rule-alert'
 
+  /** Alerts generated from rules */
   interface RuleAlert {
     alert: boolean
     name: string
     error?: boolean
     message?: string
+    /** determine where to route the alert */
     level: 'prod' | 'test'
     description?: string
     playbook?: string
     context: Record<string, unknown>
   }
 
+  /** Possible payloads from Scan events */
   type ScanEventPayload = WebPageError
   | WebConsoleMessage
   | LogMessage
@@ -75,6 +79,7 @@ declare namespace MerryMaker {
   }
 
   interface Screenshot {
+    /** base64 encoded screenshot */
     payload: string
   }
 
