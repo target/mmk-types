@@ -10,3 +10,9 @@ They are currently used in the API, Jobs, and Scanner (rules).
 ```
 yarn install @cfc/merry-maker-types
 ```
+
+---
+
+```
+Copyright (c) 2021 Target Brands, Inc.
+```
