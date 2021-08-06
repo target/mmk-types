@@ -19,6 +19,7 @@ declare namespace MerryMaker {
   | 'error'
   | 'complete'
   | 'rule-alert'
+  | 'html-snapshot'
 
   /** Alerts generated from rules */
   interface RuleAlert {
@@ -45,6 +46,7 @@ declare namespace MerryMaker {
   | WebFunctionCallEvent
   | WebScriptEvent
   | RuleAlert
+  | HtmlSnapshot
 
   interface ScanEvent {
     scanID: ScanID
@@ -211,6 +213,11 @@ declare namespace MerryMaker {
     entry: 'rule-alert'
     rule: string
     event: RuleAlert
+  }
+
+  interface HtmlSnapshot {
+    url: string
+    html: string
   }
 
   interface ScanQueueJob {
