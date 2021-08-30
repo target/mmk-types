@@ -5,6 +5,7 @@
   "description": "Merry Maker Typings",
   "repository": "git.target.com/cfc/merry-maker-types",
   "main": "index.d.ts",
+  "types": "index.d.ts",
   "license": "MIT",
   "dependencies": {
     "@types/puppeteer": "^3.0.1"
