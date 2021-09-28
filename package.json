@@ -1,9 +1,9 @@
 {
-  "name": "@cfc/merry-maker-types",
+  "name": "@merrymaker/types",
   "version": "1.0.2",
-  "author": "CyberDev <TTS-CyberDevEngineering@target.com>",
+  "author": "Target Brands, Inc.",
   "description": "Merry Maker Typings",
-  "repository": "git.target.com/cfc/merry-maker-types",
+  "repository": "github.com/target/mmk-types",
   "main": "index.d.ts",
   "types": "index.d.ts",
   "license": "MIT",
