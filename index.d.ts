@@ -16,6 +16,7 @@ declare namespace MerryMaker {
   | 'file-download'
   | 'log-message'
   | 'screenshot'
+  | 'active'
   | 'error'
   | 'complete'
   | 'rule-alert'
