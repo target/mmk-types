@@ -8,7 +8,7 @@ They are currently used in the API, Jobs, and Scanner (rules).
 ## Install
 
 ```
-yarn install @cfc/merry-maker-types
+yarn install @merrymaker/types
 ```
 
 ---
