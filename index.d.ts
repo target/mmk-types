@@ -18,6 +18,7 @@ declare namespace MerryMaker {
   | 'screenshot'
   | 'active'
   | 'error'
+  | 'failed'
   | 'complete'
   | 'rule-alert'
   | 'html-snapshot'
