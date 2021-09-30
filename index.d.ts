@@ -131,7 +131,7 @@ declare namespace MerryMaker {
 
   interface WebFunctionCallEvent {
     func: string
-    args: string[]
+    args: string
     funcSource: string
     target: TargetEle
     trace: Trace
