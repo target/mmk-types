@@ -135,6 +135,8 @@ declare namespace MerryMaker {
     funcSource: string
     target: TargetEle
     trace: Trace
+    prop?: string
+    element?: string
   }
 
   interface WebScriptEvent {
