@@ -18,6 +18,7 @@ declare namespace MerryMaker {
   | 'screenshot'
   | 'active'
   | 'error'
+  | 'failed'
   | 'complete'
   | 'rule-alert'
   | 'html-snapshot'
@@ -131,10 +132,12 @@ declare namespace MerryMaker {
 
   interface WebFunctionCallEvent {
     func: string
-    args: string[]
+    args: string
     funcSource: string
     target: TargetEle
     trace: Trace
+    prop?: string
+    element?: string
   }
 
   interface WebScriptEvent {
