@@ -165,6 +165,7 @@ declare namespace MerryMaker {
     entry: ScanEventType
     scan_id: string
     level: EventLogLevels
+    test?: boolean
     created_at?: Date
     event: EventMessage | ScanEventPayload
   }
