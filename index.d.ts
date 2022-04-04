@@ -53,6 +53,7 @@ declare namespace MerryMaker {
   interface ScanEvent {
     scanID: ScanID
     type: ScanEventType
+    test?: boolean
     payload: ScanEventPayload
   }
 
